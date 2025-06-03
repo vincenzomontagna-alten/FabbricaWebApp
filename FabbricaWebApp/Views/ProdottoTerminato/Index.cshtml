@@ -1,0 +1,35 @@
+﻿@model IEnumerable<FabbricaWebApp.Models.ProdottoTerminato>
+
+@{
+    ViewData["Title"] = "Prodotti Terminati";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Aggiungi Nuovo Prodotto</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.NomeProdotto)</th>
+            <th>@Html.DisplayNameFor(model => model.Quantita)</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var prodotto in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => prodotto.NomeProdotto)</td>
+                <td>@Html.DisplayFor(modelItem => prodotto.Quantita)</td>
+                <td>
+                    <a class="btn btn-info" asp-action="Edit" asp-route-id="@prodotto.Id">Modifica</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@prodotto.Id">Elimina</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
