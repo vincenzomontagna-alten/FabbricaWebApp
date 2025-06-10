@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FabbricaWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29fa8ed067b541f1b605da2dcd78dfef2c004510")]
 [assembly: System.Reflection.AssemblyProductAttribute("FabbricaWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FabbricaWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

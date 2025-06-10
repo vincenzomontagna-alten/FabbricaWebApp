@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FabbricaWebApp.Models.ProdottoTerminato>
+﻿@model List<ProdottoTerminato>
 
 @{
     ViewData["Title"] = "Prodotti Terminati";
@@ -11,13 +11,6 @@
 </p>
 
 <table class="table table-striped">
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.NomeProdotto)</th>
-            <th>@Html.DisplayNameFor(model => model.Quantita)</th>
-            <th>Azioni</th>
-        </tr>
-    </thead>
     <tbody>
         @foreach (var prodotto in Model)
         {
@@ -28,6 +21,10 @@
                     <a class="btn btn-info" asp-action="Edit" asp-route-id="@prodotto.Id">Modifica</a>
                     <a class="btn btn-danger" asp-action="Delete" asp-route-id="@prodotto.Id">Elimina</a>
                 </td>
+            </tr>
+            <tr>
+                <td>@prodotto.NomeProdotto</td>
+                <td>@prodotto.Quantita</td>
             </tr>
         }
     </tbody>
